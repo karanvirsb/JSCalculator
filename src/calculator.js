@@ -71,7 +71,7 @@ function saveToHistory(question, answer){
 function additionCalc(num1, num2){
 
     if(areRealNumbers(num1, num2) === -1){
-        return 'Arithematic Error'
+        return 'Arithmatic Error'
     }
     
     return (parseFloat(num1) + parseFloat(num2)); 
