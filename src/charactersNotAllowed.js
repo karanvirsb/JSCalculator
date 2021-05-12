@@ -1,15 +1,20 @@
-const inputKeyUp = document.getElementById('input');  
+const inputKeyDown = document.getElementById('input');  
 
-inputKeyUp.addEventListener('keydown', e => {
+inputKeyDown.addEventListener('keydown', e => {
     
-
     const key = e;
     const keyCode = key.key;
+    console.log(keyCode);
 
-    const regSymbol = /\d|\+|\-|\/|\*|\b/
+    const regSymbol = /[0-9]|\+|\-|\/|\*/
+
+    console.log(regSymbol.test(keyCode)); 
 
     if(!regSymbol.test(keyCode)){
         key.preventDefault(keyCode); 
+    } 
+    if(keyCode === 'Backspace'){
+        input.value = input.value.substring(0, input.value.length-1); 
     }
 
 });
