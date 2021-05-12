@@ -1,0 +1,224 @@
+:root{
+    --btn-color: #58595b; 
+    --display-color: ;
+    --input-color: ;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px; 
+    padding: 0px; 
+}
+
+body{ 
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+}
+
+/* calculator body */
+
+div#wrapper{
+    display: flex; 
+    width: 600px;
+    height: 500px;
+    margin: 1rem; 
+}
+
+#calculator{
+    border-radius: 10px;
+    position: relative;
+    width: 100%; 
+    background: #121212;
+}
+
+/* Answers */
+
+.display{
+    width: 100%; 
+    height: 100px; 
+    display: flex; 
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+p#answer {
+    background: #a2af77;
+    width: 95%;
+    height: 100%;
+    text-align: right;
+    padding-top: 1rem;
+    font-size: 3rem;
+    overflow-x:auto;
+    overflow-y: hidden;
+    padding-right: 1rem;
+    border-radius: 25px;
+   
+}
+
+/* Input */
+
+#input{
+    width: 100%;
+    height: 75px;
+    text-align: right;
+    font-size: 1.75rem;
+    padding-right: 1rem;
+}
+
+/* button container */
+
+.container{
+    width: 100%;
+    height: 325px;
+    background: #1e1c1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-container{
+    padding: 1rem;
+    width: 95%; 
+    height: 95%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(autofit, minmax(120px, 1fr));
+    grid-template-rows: repeat(5, 1fr);
+}
+
+/* buttons */
+
+.btn{
+    font-size: 1.5rem;
+    background: #58595b;
+    color: white;
+    border: 2px solid grey;
+    border-radius: 75%;
+}
+
+.btn:hover{
+    background: grey;
+}
+
+#btn-subtract{
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+
+#btn-addition{
+    grid-column: 2/2;
+    grid-row: 1/2;
+}
+
+#btn-multiplication{
+   grid-column: 3/4;
+   grid-row: 1/2; 
+}
+
+#btn-division{
+    grid-column: 4/4;
+    grid-row: 3/4;
+}
+
+#btn-clear{
+    grid-column: 4/4;
+    grid-row: 1/2;
+}
+
+#btn-backspace{
+    grid-column: 4/4;
+    grid-row: 2/3;
+}
+
+#btn-enter{
+    grid-column: 4/4;
+    grid-row: 4/6;
+    background: orange;
+}
+
+#btn-enter:hover{
+    background:grey;
+}
+
+/* history */
+
+#history-btn{
+    position: relative;
+    background: #3d3d3d;
+    color:white;
+    padding: 0.5rem;
+    white-space: pre-line;
+    width: 50px;
+    font-size: 0.75rem; 
+    border: none; 
+    margin: 1rem;
+}
+
+#history-btn:hover{
+    background: #535151;
+}
+
+.closed{
+    display: none; 
+}
+
+#history{
+    width: 200px;
+    height: 500px;
+    background: #131313;
+    color: white;
+    margin-left: 10px;
+}
+
+#history-title{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+#history-title h3{
+    padding: 0.5rem;
+}
+
+#close-history{
+    width: 25px;
+    height: 25px; 
+    background: #121212;
+    border: none; 
+    color: white;
+    margin-right: 5px;
+}
+
+#close-history:hover{
+    background: rgb(255, 80, 80);
+}
+
+#history-ul{
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.history-item{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history-item button{
+    width: 100%;
+    height: 75px;
+    overflow: hidden;
+    border-left: none;
+    border-right: none; 
+    color: white;
+    background: #121212;
+    padding: 1rem;
+}
+
+.history-item button:hover{
+    background: grey;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./src/main.css">
+    <script defer src="./src/calculator.js"></script>
+    <script defer src="./src/displayValues.js"></script>
+    <script defer src="./src/charactersNotAllowed.js"></script>
+    <script defer src="./src/history.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="calculator">
+            <div class="display">
+                <p id="answer"></p>
+            </div>
+            <div class="input">
+                <input id="input" type="text" autofocus>
+            </div>
+            <div class="container">
+                <div class="btn-container">
+                    <button id="btn-1" class="btn" value="1" onclick="buttonValueDisplay(this)">1</button>
+                    <button id="btn-2" class="btn" value="2" onclick="buttonValueDisplay(this)">2</button>
+                    <button id="btn-3" class="btn" value="3" onclick="buttonValueDisplay(this)">3</button>
+                    <button id="btn-4" class="btn" value="4" onclick="buttonValueDisplay(this)">4</button>
+                    <button id="btn-5" class="btn" value="5" onclick="buttonValueDisplay(this)">5</button>
+                    <button id="btn-6" class="btn" value="6" onclick="buttonValueDisplay(this)">6</button>
+                    <button id="btn-7" class="btn" value="7" onclick="buttonValueDisplay(this)">7</button>
+                    <button id="btn-8" class="btn" value="8" onclick="buttonValueDisplay(this)">8</button>
+                    <button id="btn-9" class="btn" value="9" onclick="buttonValueDisplay(this)">9</button>
+                    <button id="btn-0" class="btn" value="0" onclick="buttonValueDisplay(this)">0</button>
+                    <button id="btn-subtract" class="btn" value="-" onclick="buttonValueDisplay(this)">-</button>
+                    <button id="btn-addition" class="btn" value="+" onclick="buttonValueDisplay(this)">+</button>
+                    <button id="btn-division" class="btn" value="/" onclick="buttonValueDisplay(this)">/</button>
+                    <button id="btn-multiplication" class="btn" value="*" onclick="buttonValueDisplay(this)">*</button>
+                    <button id="btn-enter" class="btn" value="=">=</button>
+                    <button id="btn-backspace" class="btn" value="backspace" onclick="buttonValueDisplay(this)">&larr;</button>
+                    <button id="btn-dot" class="btn" value="dot" onclick="buttonValueDisplay(this)">.</button>
+                    <button id="btn-clear" class="btn" value="clear" onclick="buttonValueDisplay(this)">C</button>
+                    <button class="btn"></button>
+                </div>
+            </div>
+        </div>
+        <div id="history-btn-div">
+            <button id="history-btn">H
+                i
+                s
+                t
+                o
+                r
+                y</button>
+        </div>
+        <div id="history" class="closed">
+            <div id="history-title">
+                <h3>History</h3>
+                <button id="close-history">X</button>
+            </div>    
+            <ul id="history-ul">
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
